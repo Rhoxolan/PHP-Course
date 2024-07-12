@@ -1,1 +1,1 @@
-# PHP_Course
+Practical works and homeworks on the subject "Developing server web applications using PHP programming language, MySQL DBMS, and Ajax technology" (09.06.2023 - 01.08.2023) at IT STEP Academy in Kryvyi Rih.
