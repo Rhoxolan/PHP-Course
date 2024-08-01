@@ -1,3 +1,14 @@
+<?
+//С помощью данного функционала мы аналогично можем добиться перенаправления на форму с отображением сообщения от сервера
+//См. скрипт addCar.server.php
+
+// session_start();
+// if (isset($_SESSION['message'])) {
+//     echo "<script>alert('{$_SESSION['message']}');</script>";
+//     unset($_SESSION['message']);
+// }
+?>
+
 <form action="addCar.server.php" method="post">
     <div style="margin: 5px;">
         <div>

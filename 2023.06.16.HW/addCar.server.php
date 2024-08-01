@@ -1,4 +1,6 @@
 <?
+//session_start();
+
 $car = array(
     "manufacturer" => $_POST["Manufacturer"],
     "model" => $_POST["Model"],
@@ -7,6 +9,11 @@ $car = array(
 );
 
 save_to_file($car);
+echo "<script>window.location = '/?page=Add%20Car';</script>";
+
+//Реализация подхода Post/Redirect/Get
+//С помощью данного функционала мы аналогично можем добиться перенаправления на форму с отображением сообщения от сервера
+//header("Location: /?page=Add%20Car");
 
 function save_to_file($car)
 {
@@ -25,11 +32,12 @@ function save_to_file($car)
         $str = fgets($fd);
         if (strpos($str, $carData) !== false) {
             echo "<script>alert('This data is exist!');</script>";
+            //$_SESSION["message"] = 'This data is exist!'; //См. комм. выше
             return;
         }
     }
 
-    fwrite($fd, $carData);
+    fwrite($fd, $carData.PHP_EOL);
 
     fclose($fd);
 }
