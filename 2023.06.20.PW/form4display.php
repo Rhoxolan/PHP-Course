@@ -17,13 +17,12 @@ $history = $_SESSION["History"];
 </p>
 <p>
     History:
+    <br>
     <?
-    $component = "";
-    $component .= "<span>";
+    $text = "";
     foreach ($history as $page) {
-        $component .= "$page ";
+        $text .= "$page<br>";
     }
-    $component .= "</span>";
-    echo $component;
+    echo $text;
     ?>
 </p>

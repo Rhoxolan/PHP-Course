@@ -1,5 +1,5 @@
 <?
-$_SESSION["History"][] = $_SERVER['PHP_SELF'] . "/?" . $_SERVER['QUERY_STRING'];
+$_SESSION["History"][] = $_SERVER['REQUEST_URI'];
 
 ?>
 
